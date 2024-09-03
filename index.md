@@ -1,7 +1,4 @@
----
-layout: default
----
-
+![Branching](https://github.com/loaaan/loaan-blog.github.io/blob/main/img/thecat.jpg)
 
 # About 
 
