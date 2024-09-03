@@ -2,22 +2,18 @@
 layout: default
 ---
 
-Text can be **bold**, _italic_, ~~strikethrough~~ or `keyword`.
 
-// [Link to another page](./another-page.html).
+# About 
 
+I will leave here all the write ups, blogs or anything related to projects as a way to keep learning, create some content and make this an habit.
 
-# Header 1
+## Write Ups
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+### [CTF](./another-page.html)
+### [Reverse Engineer](./another-page.html)
+### [Sherlock](./another-page.html)
+### [Cybersecurity Projects](./another-page.html)
 
-## Header 2
-
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
-
-### Header 3
 
 ```js
 // Javascript code with syntax highlighting.
