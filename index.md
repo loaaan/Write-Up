@@ -6,11 +6,13 @@ I will leave here all the write ups, blogs or anything related to projects as a 
 
 ## Write Ups
 
-### [CTF](./CTF/)
-### [Reverse Engineer](./Reverse%20Engineer/SimpleS%20crackmesde/index.md)
-### [Sherlock](./Sherlock/)
+### CTF
+### Reverse Engineer
+- crackme
+  - ![SimpleS crackmes.de](./Reverse%20Engineer/SimpleS%20crackmesde/SimpleS.md)
+### Sherlock
 
 ## Projects
 
-### [Cybersecurity Projects](./Cybersecurity%20Projects/)
+### Cybersecurity Projects
 
