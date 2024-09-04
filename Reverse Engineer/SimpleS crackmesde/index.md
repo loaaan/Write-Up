@@ -10,6 +10,8 @@ it seems that this function is creating new socket
     htons might be using the parameters: 
     7A2F: 16-bit value
 
+![test](./img/debuggin1.png)
+
 this function prepares the 16-bit value to use in networking operations 
 
 and then storing the return value in memory
