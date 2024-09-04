@@ -1,4 +1,4 @@
-![Branching](https://github.com/loaaan/loaan-blog.github.io/blob/main/img/thecat.jpg)
+![Branching](./img/thecat.jpg)
 
 # About 
 
