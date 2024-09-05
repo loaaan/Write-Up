@@ -14,4 +14,14 @@ So basically `logstash` works as a delivery guy on his scooter, delivering food 
 
 ## Objective
 
-Build, 
+Learn how to set up and configure ELK stash in the cloud, along with attacks, detection and investigation. 
+Learn how to create alerts and dashboards and integrate a ticketing system.
+
+## Hands On
+So now that I have a bigger picture and better understanding, I will start the process documentation.
+
+
+## Logical Diagram
+The first step is creating a logical diagram. I find it funny to create it and it also allows me to visualize how the connection will work, cause sometimes it can get very abstract.
+
+![logicaldia](./img/logicaldiagram.png)
