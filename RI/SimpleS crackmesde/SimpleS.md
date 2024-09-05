@@ -44,7 +44,7 @@ After the entry point I see a function being called, I will investigate that.
 
 Now I need to investigate what the [socket](https://learn.microsoft.com/en-us/windows/win32/api/winsock2/nf-winsock2-socket) function does.
 
-    Socket might be using the parameters:
+Socket might be using the parameters:
 
     2: address family (indicating IPv4)
 
@@ -62,21 +62,25 @@ We may have an idea what this program is doing, lets go to the next instruction.
 
 I see another function called [htons](https://learn.microsoft.com/en-us/windows/win32/api/winsock/nf-winsock-htons), just like the other one, I will search  _function_ + msdn. 
 
-    htons might be using the parameters: 
+htons might be using the parameters: 
 
     7A2F: 16-bit value (this could represent a port number)
+
     htons function seems to be preparing the value to be used in network operations
+    
     and saves the returned value to 403090
 
 ![bindfunc](./img/bindfunc.png)
 
 Now that we have an idea of what the program is trying to do so far, lets continue with the other function which seems to be [bind](https://learn.microsoft.com/en-us/windows/win32/api/winsock/nf-winsock-bind).
 
-> bind function might be using the parameters: 
->
-> 10:  The length, in bytes, of the value pointed to by addr (16 in decimal)
-> simples.403090: sockaddr structure which is 2, the address family for IPv4
-> 403232: descriptor identifying unbound socket returned by htons
+bind function might be using the parameters: 
+
+    10:  The length, in bytes, of the value pointed to by addr (16 in decimal)
+
+    simples.403090: sockaddr structure which is 2, the address family for IPv4
+
+    403232: descriptor identifying unbound socket returned by htons
 
 So now we have identified 3 functions that used together basically the program is preparing the necessary arguments to bind a socket to an specific IP address and port on the local machine.
 
@@ -84,10 +88,11 @@ So now we have identified 3 functions that used together basically the program i
 
 The next instruction is [listen](https://learn.microsoft.com/en-us/windows/win32/api/winsock2/nf-winsock2-listen)
 
-> listen function using the parameters: 
->
-> 403232: descriptor identifying unbound socket returned by htons
-> 1: backlog value - maximum number of pending connections that can be queued before the server starts rejecting new connection attempts
+listen function using the parameters: 
+
+    403232: descriptor identifying unbound socket returned by htons
+
+    1: backlog value - maximum number of pending connections that can be queued before the server starts rejecting new connection attempts
 
 This function prepares the socket to accept incoming connection requests, identified by the descriptor - binds a socket to an address and port.
 
@@ -100,12 +105,15 @@ We still dont have the crack, it seems that we need to get to _congratz!_ but ho
 After the program tell us to do something we see another function this time is called [accept](https://learn.microsoft.com/en-us/windows/win32/api/winsock2/nf-winsock2-accept).
 
 
-> accept function:
-> 
-> 0: address of the connecting entity, is an optional parameter, indicated by 0 not being used
-> 0: size of the address, is an optional parameter, indicated by 0 not being used
-> 403232: socket descriptor returned by socket
-> 40322E: address on the memory where the returned value of accept will be linked.
+accept function:
+
+    0: address of the connecting entity, is an optional parameter, indicated by 0 not being used
+    
+    0: size of the address, is an optional parameter, indicated by 0 not being used
+    
+    403232: socket descriptor returned by socket
+    
+    40322E: address on the memory where the returned value of accept will be linked.
 
 This function is designed to accept an incoming connection on a previously created socket and returns a value that is a descriptor for new socket. 
 
