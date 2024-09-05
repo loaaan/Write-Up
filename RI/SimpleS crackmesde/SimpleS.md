@@ -44,13 +44,13 @@ After the entry point I see a function being called, I will investigate that.
 
 Now I need to investigate what the [socket](https://learn.microsoft.com/en-us/windows/win32/api/winsock2/nf-winsock2-socket) function does.
 
->Socket might be using the parameters:
-> 
-> 2: address family (indicating IPv4)
-> 1: type of socket (TCP)
-> 6: protocol to be used (protocol for TCP)
-> socket: it seems that this function is creating new socket
-> saving the descriptor to the memory address at 403232
+    Socket might be using the parameters:
+
+    2: address family (indicating IPv4)
+    1: type of socket (TCP)
+    6: protocol to be used (protocol for TCP)
+    socket: it seems that this function is creating new socket
+    saving the descriptor to the memory address at 403232
 
 We may have an idea what this program is doing, lets go to the next instruction.
 
