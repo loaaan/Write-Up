@@ -1,4 +1,6 @@
-# Is this workinggggg
+# SimpleS
+
+![working](./img/programworking.png)
 
 we search on google what the socket function does
     Socket might be using the parameters: 
