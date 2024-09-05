@@ -50,6 +50,7 @@ Once the server is up, we can _for practicity_ ssh from our machine to the serve
 ![server2](./img/server2.png)
 
 *******
+
 ## Elasticsearch installation
 
 Once that I spined the server up, now i will install elasticsearch using `wget` , then `dpkg -i` to install the program and save the important information we are presented to.
@@ -59,3 +60,37 @@ Once that I spined the server up, now i will install elasticsearch using `wget` 
 I need to configure elasticsearch service that I just installed with `nano elasticsearch.yml` and enabling the network connection with the IP of the machine and selecting the port. After that we can activate the elasticsearch service.
 
 ![elas](./img/elas.png)
+
+## Kibana installation
+
+The next program to be installed is Kibana, just like the other one, we will go to the download page and use wget on the cloud server.
+
+![kib](./img/kib.png)
+
+after that we need to configure kibana too. to do so we'll use `nano /etc/kibana/kibana.yml/` and enable server port and changing server host to our public IP
+
+![kib1](./img/kib1.png)
+
+
+
+I needed to make some settings on the firewall to make my set up secure (only i can access) and we need to set up the VM as well. 
+
+![fw](./img/fw.png)
+
+finally we can access to elasticsearch which will ask us for the enrollment token
+
+> these steps are quite tedious since it is only connecting one program to the other one
+
+we will generate keys from one program to connect to the other one to be able to configure and set up alerts
+
+![kibset](./img/kibset.png)
+
+once our kibana service is set up, we can proceed with the next step
+
+*****
+## Windows Server installation
+### (with RDP exposed to the internet)
+
+On vultr I went ahead and deployed another server with windows the cheapest posible
+
+![winserv](./img/wserv.png)
