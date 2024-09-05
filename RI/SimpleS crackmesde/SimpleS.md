@@ -24,9 +24,9 @@ I started with PE-Bear, which is a tool used for reverse engineer and analyze PE
 
 From PEBear I could see this is a 32-bit program so my next step is to open a debugger.
 
-> What is debugging? 
->
-> The process of identifying, analyzing and fixing bugs or defects in software. It is not like we want to fix a program a bad actor made, but the debuggers let us set break points so we can see how the program works step by step, if we want to get congrats, we need to see what the program does to acomplish that.
+    What is debugging? 
+
+    The process of identifying, analyzing and fixing bugs or defects in software. It is not like we want to fix a program a bad actor made, but the debuggers let us set break points so we can see how the program works step by step, if we want to get congrats, we need to see what the program does to acomplish that.
 
 The next program I will use is x32dbg.
 
