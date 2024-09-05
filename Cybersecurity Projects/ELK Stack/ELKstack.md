@@ -91,9 +91,13 @@ once our kibana service is set up, we can proceed with the next step
 ## Windows Server installation
 ### (with RDP exposed to the internet)
 
-On vultr I went ahead and deployed another server with windows the cheapest posible
+On vultr I went ahead and deployed another server with windows the cheapest option posible
 
 ![winserv](./img/wserv.png)
+
+also, I did notice that, since this machine will be exposed, we don't want to have that open access to our vpc, I will not use a VPC in that machine, so I modified the logical diagram.
+
+![logical2](./img/logical2.png)
 
 Once is installed, we can connect to the server with our computer through RDP
 
