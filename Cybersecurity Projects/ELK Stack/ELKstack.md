@@ -25,3 +25,37 @@ So now that I have a bigger picture and better understanding, I will start the p
 The first step is creating a logical diagram. I find it funny to create it and it also allows me to visualize how the connection will work, cause sometimes it can get very abstract.
 
 ![logicaldia](./img/logicaldiagram.png)
+
+With that information we can go ahead and start the machines on the cloud and install the programs. 
+
+## VPC creation
+
+![vpc](./img/vpc.png)
+
+> unlike aws, I find VULTR very easy to use and configure
+
+once that I easily created the VPC 2.0 in dallas, I will go ahead and spin up an ubuntu server
+
+## ubuntu server creation
+
+![vpc2](./img/vpc2.png)
+![vpc3](./img/vpc3.png)
+
+Pretty straight forward process, it will ask us about how many storage do you want, the version of the Virtual Machine _i chose ubuntu 24.04_. 
+
+![server1](./img/server1.png)
+
+Once the server is up, we can _for practicity_ ssh from our machine to the server in the cloud.
+
+![server2](./img/server2.png)
+
+*******
+## Elasticsearch installation
+
+Once that I spined the server up, now i will install elasticsearch using `wget` , then `dpkg -i` to install the program and save the important information we are presented to.
+
+![server22](./img/server22.png)
+
+I need to configure elasticsearch service that I just installed with `nano elasticsearch.yml` and enabling the network connection with the IP of the machine and selecting the port. After that we can activate the elasticsearch service.
+
+![elas](./img/elas.png)
