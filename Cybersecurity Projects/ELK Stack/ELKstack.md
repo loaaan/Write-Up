@@ -94,3 +94,7 @@ once our kibana service is set up, we can proceed with the next step
 On vultr I went ahead and deployed another server with windows the cheapest posible
 
 ![winserv](./img/wserv.png)
+
+Once is installed, we can connect to the server with our computer through RDP
+
+![winserv1](./img/wset1.png)
