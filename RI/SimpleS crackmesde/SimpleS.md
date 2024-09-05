@@ -47,6 +47,7 @@ Now I need to investigate what the [socket](https://learn.microsoft.com/en-us/wi
     Socket might be using the parameters:
 
     2: address family (indicating IPv4)
+    
     1: type of socket (TCP)
     6: protocol to be used (protocol for TCP)
     socket: it seems that this function is creating new socket
