@@ -24,9 +24,9 @@ I started with PE-Bear, which is a tool used for reverse engineer and analyze PE
 
 From PEBear I could see this is a 32-bit program so my next step is to open a debugger.
 
-    What is debugging? 
-
-    The process of identifying, analyzing and fixing bugs or defects in software. It is not like we want to fix a program a bad actor made, but the debuggers let us set break points so we can see how the program works step by step, if we want to get congrats, we need to see what the program does to acomplish that.
+> What is debugging? 
+>
+> The process of identifying, analyzing and fixing bugs or defects in software. It is not like we want to fix a program a bad actor made, but the debuggers let us set break points so we can see how the program works step by step, if we want to get congrats, we need to see what the program does to acomplish that.
 
 The next program I will use is x32dbg.
 
@@ -47,10 +47,13 @@ Now I need to investigate what the [socket](https://learn.microsoft.com/en-us/wi
     Socket might be using the parameters:
 
     2: address family (indicating IPv4)
-    
+
     1: type of socket (TCP)
+
     6: protocol to be used (protocol for TCP)
+
     socket: it seems that this function is creating new socket
+
     saving the descriptor to the memory address at 403232
 
 We may have an idea what this program is doing, lets go to the next instruction.
@@ -59,11 +62,11 @@ We may have an idea what this program is doing, lets go to the next instruction.
 
 I see another function called [htons](https://learn.microsoft.com/en-us/windows/win32/api/winsock/nf-winsock-htons), just like the other one, I will search  _function_ + msdn. 
 
-> htons might be using the parameters: 
->
-> 7A2F: 16-bit value (this could represent a port number)
-> htons function seems to be preparing the value to be used in network operations
-> and saves the returned value to 403090
+    htons might be using the parameters: 
+
+    7A2F: 16-bit value (this could represent a port number)
+    htons function seems to be preparing the value to be used in network operations
+    and saves the returned value to 403090
 
 ![bindfunc](./img/bindfunc.png)
 
