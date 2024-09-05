@@ -59,6 +59,7 @@ We may have an idea what this program is doing, lets go to the next instruction.
 I see another function called [htons](https://learn.microsoft.com/en-us/windows/win32/api/winsock/nf-winsock-htons), just like the other one, I will search  _function_ + msdn. 
 
 > htons might be using the parameters: 
+>
 > 7A2F: 16-bit value (this could represent a port number)
 > htons function seems to be preparing the value to be used in network operations
 > and saves the returned value to 403090
@@ -68,6 +69,7 @@ I see another function called [htons](https://learn.microsoft.com/en-us/windows/
 Now that we have an idea of what the program is trying to do so far, lets continue with the other function which seems to be [bind](https://learn.microsoft.com/en-us/windows/win32/api/winsock/nf-winsock-bind).
 
 > bind function might be using the parameters: 
+>
 > 10:  The length, in bytes, of the value pointed to by addr (16 in decimal)
 > simples.403090: sockaddr structure which is 2, the address family for IPv4
 > 403232: descriptor identifying unbound socket returned by htons
