@@ -12,6 +12,8 @@ I will leave here all the write ups, blogs or anything related to projects as a 
   - [SimpleS crackme](RI/SimpleS%20crackmesde/SimpleS.html)
 
 ### Sherlock
+- HTB
+  - [Campfire](Sherlock/Campfire/campfire.html)
 
 ### Web Exploit
 
