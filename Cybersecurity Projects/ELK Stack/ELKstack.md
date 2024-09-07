@@ -102,3 +102,9 @@ also, I did notice that, since this machine will be exposed, we don't want to ha
 Once is installed, we can connect to the server with our computer through RDP
 
 ![winserv1](./img/wset1.png)
+
+## Elastic agent and Fleet Server
+
+The next step is set up the elastic agent and the fleet server, but what are these things? 
+Basically, the agent is the one who actually collects the information from the system, and the fleet server is the centralized system to manage the agents (coordinates elastic agents / collects data)
+
