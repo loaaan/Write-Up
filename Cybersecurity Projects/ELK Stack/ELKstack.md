@@ -108,3 +108,26 @@ Once is installed, we can connect to the server with our computer through RDP
 The next step is set up the elastic agent and the fleet server, but what are these things? 
 Basically, the agent is the one who actually collects the information from the system, and the fleet server is the centralized system to manage the agents (coordinates elastic agents / collects data)
 
+![fleet](./img/fleetconf.png)
+
+I need to deploy another server for it to be the fleet server (the remote control for the agents), ubuntu, inside of my vpc 2.0.
+
+![fleetc](./img/fleetconf1.png)
+
+On the elastic server i found the instructions to add an agent
+
+![fleetc1](./img/fleetconf2.png)
+
+I made the necessary adjustments for the firewall between my servers.
+
+![fleetfw](./img/fleetfw.png)
+![fleetfw2](./img/fleetfw2.png)
+
+Also, i did some adjustments on the configuration command the elastic server is giving me, since the port we are going to use is 8220 instead of 443, and since it is a self signed certificate I needed to specify the flag `--insecure`
+
+![fleetc3](./img/fleetconf3.png)
+![fleetc4](./img/fleetconf4.png)
+
+and after the installation is over in the windows server, i can verify the agent on the elastic server
+
+![fleetc5](./img/fleetconf5.png)
