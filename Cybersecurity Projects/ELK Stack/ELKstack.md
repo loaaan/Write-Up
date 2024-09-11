@@ -146,7 +146,9 @@ runs as a background service and logs key system events, it then can be captured
 i connected to the widnows server through RDP and downloaded sysmon and sysmon olaf config
 ![sysmon1](./img/sysmon1.png)
 > what is sysmon olaf config?
-> since sysmon is very powerfull and the PCs from nowadays does A LOT of things all the time to be able to function, it can log a lot of information we dont need, so in this way sysmon only tracks the really important stuff at the moment we investigate threats or forensics. 
+> since sysmon is very powerfull and the PCs from nowadays does A LOT of things all the time to be able to function, it can log a lot of information we dont need, so in this way sysmon only tracks the really important stuff at the moment we investigate threats or forensics.
+
+
 ![sysmon](./img/sysmon.png)
 ![sysmon2](./img/sysmon2.png)
 ![sysmon3](./img/sysmon3.png)
@@ -158,5 +160,27 @@ so now i just installed a new service, configurated in my Windows server, now i 
 
 ### Elasticsearch ingest data
 
+going to the elasticsearch GUI server (on port 5601), i need to add an integration
+
+![elasticsearch](./img/elasticSearch.png)
+
+and i will create 2 policies; 1 for sysmon that i just installed, and the other one for windows defender
+
+> why from windows defender? 
+> sysmon focuses on detailed system events and windows defender on malware detection and security threats. so if windows defender logs a threat, with sysmon we will have details of the environment at that moment and we can correlate information
+
+>basically for better detection, correlation and response to potential security incidents. 
 
 
+![elasticsearch1](./img/elasticSearch1.png)
+![elasticsearch2](./img/elasticSearch2.png)
+![elasticsearch3](./img/elasticSearch3.png)
+![elasticsearch4](./img/elasticSearch4.png)
+
+once that is installed and configured, i made sure the firewall was correctly configurated to accept communication through the port that im using to ingest the data to (9200)
+
+after that i can make sure it's working after restarting elastic service on the windows server and verifying something is happenning with the cpu and memory usage
+
+![elasticsearch5](./img/elasticSearch5.png)
+
+**********
