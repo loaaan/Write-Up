@@ -6,12 +6,26 @@ status: in progress
 
 This very easy machine is a good training in digital forensics and incident response.
 
+First, reading on the sherlock, i see that this exercise might be related to kerboroasting activities so i need to set the context here.
+
+>Kerberos is a network authentication protocol, used to verify the identity of users in a secure way
+> How it works?
+> - Login with a password
+> - Get a Ticket granting service (it does not includes password)
+> - Request access to services (we show TGT to the Key Distribution Center)
+> - Access the service (without needing to re enter password)
+
+> What is kerberoasting? 
+> 
+
+
 I see some files once that I decompress the file with 7-zip
 ![files](./img/files.png)
 and also some prefetch logs? 
 ![pref](./img/pref.png)
 
->prefetch logs
+> prefetch logs are files with the  `.pf` extension created by windowa to speed up the process of frequently used applications
+> it containts execution metadata (identify last time program was executed), program path, the accessed resources and execution times (las 8 times the program was used)
 
 with PECmd.exe i converted the prefetch files in one file so i can analyze it
 
@@ -24,7 +38,12 @@ PECmd.exe -d "./././prefetch" --csv . --csvf outputfilename.csv`
 ## Task 1
 
 > Analyzing Domain Controller Security Logs, can you confirm the date & time when the kerberoasting activity occurred?
+
+htb gives us a hint to search for the event ID 4769, but why? 
+this event generates every time Key Distribution Center gets a Kerberos Ticket Granting Service ticket request. so we now that someone wanted to have access to a service, and looking closely on the event, I can see which service was targeted
+
 ![time](./img/time%20hour.png)
+
 
 
 ## Task 2
@@ -36,7 +55,10 @@ PECmd.exe -d "./././prefetch" --csv . --csvf outputfilename.csv`
 ## Task 3
 
 > It is really important to identify the Workstation from which this activity occurred. What is the IP Address of the workstation?
+
 ![ip](./img/ip.png)
+
+On the event i can also see the IP address of the user who requested the acces to MSSQL, maybe it failed becaused the user does not have the legitimate right to access it
 
 ## Task 4
 
@@ -44,9 +66,12 @@ PECmd.exe -d "./././prefetch" --csv . --csvf outputfilename.csv`
 
 ![enum](./img/enumfile.png)
 
+i saw a bunch of 4104 errors on the events, that error indicates us that commands were executed in powershell and all of them had the same file path
+
 ## Task 5
 
 > When was this script executed?
+
 ![creatime](./img/creatime.png)
 
 
@@ -54,9 +79,11 @@ PECmd.exe -d "./././prefetch" --csv . --csvf outputfilename.csv`
 ## Task 6
 
 > What is the full path of the tool used to perform the actual kerberoasting attack?
+
 ![path](./img/path.png)
 
 ## Task 7
 
 > When was the tool executed to dump credentials?
+
 ![dump](./img/dump.png)
