@@ -26,4 +26,7 @@ I will leave here all the write ups, blogs or anything related to projects as a 
 - [Civic 2007](Automotive%20Projects/Civic07/civic07.md)*
 
 
+
+***********
+
 > '*': in progress

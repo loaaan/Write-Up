@@ -184,3 +184,18 @@ after that i can make sure it's working after restarting elastic service on the 
 ![elasticsearch5](./img/elasticSearch5.png)
 
 **********
+
+## Brute force attack 
+
+so what is it? so just like with the first 2 words of the name of the attack you can imagine what is it about
+
+the attacker attempts to guess a password, encryption key or other secret information by trying all possible combinations until the correct one is found
+
+theres actually different types of brute force attacks like: 
+- simple brute force (e.g. aaaa, aaab, aaac, etc.)
+- dictionary attack (pre-determined lis of likely passwords)
+- credential stuffing (likst of known username-password combinations like from previous data breahes)
+- hybrid attack (combination of a dictionary attack and simple brute force)
+
+i will simulate a brute force attack, that means that i will be able to know this kind of attack from both perspectives and analyze best way to defense against this attack
+

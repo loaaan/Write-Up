@@ -1,4 +1,3 @@
-status: in progress
 
 # Campfire-1
 
@@ -9,14 +8,20 @@ This very easy machine is a good training in digital forensics and incident resp
 First, reading on the sherlock, i see that this exercise might be related to kerboroasting activities so i need to set the context here.
 
 >Kerberos is a network authentication protocol, used to verify the identity of users in a secure way
-> How it works?
+>                                                                            
+> * How it works?
 > - Login with a password
 > - Get a Ticket granting service (it does not includes password)
 > - Request access to services (we show TGT to the Key Distribution Center)
 > - Access the service (without needing to re enter password)
 
-> What is kerberoasting? 
-> 
+>  * What is kerberoasting? 
+> attack that targets kerberos authentication protocol to extract service account credential from an AD environment (like the one we have here simulated, a work environment using Active Directory)
+> * How Kerberoasting works? (from attacker perspective)
+> - requests service tickets 
+> - captures the encrypted service ticket (encrypted with service's account password hash)
+> - offline password cracking, it can be guess by brute force or dictionary attacks
+> - if the password is cracked, the attacker can impersonate the service account
 
 
 I see some files once that I decompress the file with 7-zip
