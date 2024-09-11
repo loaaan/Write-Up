@@ -10,7 +10,7 @@ First, reading on the sherlock, i see that this exercise might be related to ker
 >Kerberos is a network authentication protocol, used to verify the identity of users in a secure way
 >                                                                            
 > * How it works?
-> - Login with a password
+>  - Login with a password
 > - Get a Ticket granting service (it does not includes password)
 > - Request access to services (we show TGT to the Key Distribution Center)
 > - Access the service (without needing to re enter password)
