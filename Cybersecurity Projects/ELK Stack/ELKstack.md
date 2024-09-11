@@ -131,3 +131,32 @@ Also, i did some adjustments on the configuration command the elastic server is 
 and after the installation is over in the windows server, i can verify the agent on the elastic server
 
 ![fleetc5](./img/fleetconf5.png)
+
+*************
+
+## Sysmon
+
+### What is it? 
+
+is a windows system utility used for monitoring and logging system activity in detail. 
+runs as a background service and logs key system events, it then can be captured in the windows event log and analyzed for suspiscious activity 
+-detailed information like: process creation, network connections, file creation, registry changes, dll loading, ect. 
+
+### Installation
+i connected to the widnows server through RDP and downloaded sysmon and sysmon olaf config
+![sysmon1](./img/sysmon1.png)
+> what is sysmon olaf config?
+> since sysmon is very powerfull and the PCs from nowadays does A LOT of things all the time to be able to function, it can log a lot of information we dont need, so in this way sysmon only tracks the really important stuff at the moment we investigate threats or forensics. 
+![sysmon](./img/sysmon.png)
+![sysmon2](./img/sysmon2.png)
+![sysmon3](./img/sysmon3.png)
+![sysmon4](./img/sysmon4.png)
+
+so now i just installed a new service, configurated in my Windows server, now i have to link that log data my centralized system, elastic search
+
+*******
+
+### Elasticsearch ingest data
+
+
+
