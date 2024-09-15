@@ -193,9 +193,28 @@ the attacker attempts to guess a password, encryption key or other secret inform
 
 theres actually different types of brute force attacks like: 
 - simple brute force (e.g. aaaa, aaab, aaac, etc.)
-- dictionary attack (pre-determined lis of likely passwords)
+- dictionary attack (pre-determined list of likely passwords)
 - credential stuffing (likst of known username-password combinations like from previous data breahes)
 - hybrid attack (combination of a dictionary attack and simple brute force)
 
 i will simulate a brute force attack, that means that i will be able to know this kind of attack from both perspectives and analyze best way to defense against this attack
+
+## Installing SSH server
+
+after spin up a really simple ubuntu server, we can connect to it through Powershell
+
+[sshserv](./img/sshserv.png)
+
+
+once in i update the repositories
+
+```sh
+apt-get update && apt-get upgrade -y
+```
+
+the next step is installing elastic agent
+
+## Elastic agent in linux server
+
+
 

@@ -13,7 +13,7 @@ I will leave here all the write ups, blogs or anything related to projects as a 
 
 ### Sherlock
 - HTB
-  - [Campfire](Sherlock/Campfire/campfire.html)*
+  - [Campfire](Sherlock/Campfire/campfire.html)
 
 ### Web Exploit
 
@@ -29,4 +29,4 @@ I will leave here all the write ups, blogs or anything related to projects as a 
 
 ***********
 
-> '*': in progress
+'*': in progress
