@@ -216,5 +216,6 @@ the next step is installing elastic agent
 
 ## Elastic agent in linux server
 
+> linux logs
 
-
+## Create SSH Brute Force Alert & Dashboard
