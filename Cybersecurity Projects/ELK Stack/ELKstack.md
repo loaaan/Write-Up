@@ -219,3 +219,7 @@ the next step is installing elastic agent
 > linux logs
 
 ## Create SSH Brute Force Alert & Dashboard
+
+### Remote Desktop Protocol (RDP)
+
+
