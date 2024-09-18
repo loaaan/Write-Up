@@ -17,6 +17,8 @@ I will leave here all the write ups, blogs or anything related to projects as a 
 
 ### Web Exploit
 
+### Malware Development
+
 ## Projects
 
 ### Cybersecurity Projects
