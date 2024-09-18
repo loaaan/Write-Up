@@ -274,9 +274,50 @@ system.auth.ssh.event : * and agent.name: MYDFIR-Linux-loaan and system.auth.ssh
 
 ### Windows authentication Map
 
+so, just like the linux one, i needed to identify the query that gave me the information i wanted, in this case, failed authentication attempts, and it was easy to find since most of the logs were about that
 
+![rdpKib](./img/rdpKib.png)
 
+```
+event.code: 4625 and agent.name: MYDFIR-WIN-loaan and user.name: Administrator
+```
+
+this was a lil bit different since windows manage this kind of events different, the event code for the successfull authentication changes, a quick search let me know what i wanted [here](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4624)
+
+![rdpKib1](./img/rdpKib1.png)
+
+after that i created another 2 maps from the windows server
+
+![rdpKib6](./img/rdpKib6.png)
+
+also, i added another dashboard but it was not a map, but a list from the countries that we are getting 'attacks' from
+
+![rdpKib3](./img/rdpKib3.png)
+
+![rdpKib7](./img/rdpKib7.png)
+
+## Rule Creation
+
+ok, this looks pretty ngl, but the main thing that the SIEM exists is that we need to know any time we are getting suspicious activity so now, i created a rule to be able to catch these events for both servers.
+
+![rule](./img/rdpKib2.png)
+
+![rule1](./img/rdpKib5.png)
+
+and the rule is created
+
+![rule2](./img/rdpKib4.png)
 
 ### Remote Desktop Protocol (RDP)
 
+i have talk about how i set up the windows machine with the RDP enabled, but what is it? 
+Its a technology that allows access and control a remote computer from another device over a network, event though, it's quite secure the connection since its encrypted, we left it open to the world to see who is trying to connect, usually it's an automated thing for the attackers. 
 
+### Command and Control (C2)
+
+the next part of the project is the creation of the C2 server, just like i planned it on the [logical diagram](logicaldia)
+
+but what is it? 
+is a term used in infosec and cyberwarfare to describe the infraestructure and techniques used by attackers to communicate with and control compromised systems
+
+its composed by the command server (receives commands from the attcaker and sends instructions to compromised systems), botnet, communication channels (like http, https, DNS queries or specialized protocols) and obfuscation and evation techniques.
