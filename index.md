@@ -23,6 +23,7 @@ I will leave here all the write ups, blogs or anything related to projects as a 
 
 ### Cybersecurity Projects
 - [ELK Stack](Cybersecurity%20Projects/ELK%20Stack/ELKstack.html)*
+- [Firewall + IDS/IPS + SIEM](Cybersecurity%20Projects/IDS-IPS-Firewall/fw.html)
 
 ### Automotive Projects
 - [Civic 2007](Automotive%20Projects/Civic07/civic07.md)*
