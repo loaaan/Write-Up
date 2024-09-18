@@ -245,7 +245,37 @@ And we got it working!!
 So now that i set up two vm's to send logs to my SIEM server, i will create the alerts in Kibana.
 
 
-## Create SSH Brute Force Alert & Dashboard
+## Kibana dashboards
+
+im very excited for this part of the project cause i really be feeling like a hacker man
+
+### Linux authentication map
+
+![AlertsKib](./img/AlertsKib.png)
+
+first i need to identify the query that i want to visualize, in this case, i will first set up the authentication events from the linux server and create a rule. 
+
+![AlertsKib1](./img/AlertsKib1.png)
+
+and, since i want to visualize a world map that let me know from where the attacks are coming from, i added a layer where the logs will give me the iso code from the country and, in order to visualize it, i need to collect that information from the authentication events
+
+> why the hell do i need to select the iso code of the country instead of the name? 
+> consistency and standardization, codes are numbers, and these are universally recognized to ensure consistent representation of countries, so that way we have data accuracy, and also flexibility
+
+
+![AlertsKib2](./img/AlertsKib2.png)
+
+good so i just created a map that queries the failed authentication logs to my linux server, obviously, we are interested also in the successful ones, so it's the same query but with the `accepted` field instead of `failed`.
+
+```
+system.auth.ssh.event : * and agent.name: MYDFIR-Linux-loaan and system.auth.ssh.event: Failed
+```
+![AlertsKib3](./img/AlertsKib3.png)
+
+### Windows authentication Map
+
+
+
 
 ### Remote Desktop Protocol (RDP)
 
