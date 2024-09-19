@@ -15,6 +15,9 @@ I will leave here all the write ups, blogs or anything related to projects as a 
 - HTB
   - [Campfire](Sherlock/Campfire/campfire.html)
 
+- Blue Team Labs Online
+  - [Web Shell](Sherlock/WebShell/WebShell.html)
+
 ### Web Exploit
 
 ### Malware Development
