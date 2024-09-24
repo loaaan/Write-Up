@@ -313,11 +313,29 @@ and the rule is created
 i have talk about how i set up the windows machine with the RDP enabled, but what is it? 
 Its a technology that allows access and control a remote computer from another device over a network, event though, it's quite secure the connection since its encrypted, we left it open to the world to see who is trying to connect, usually it's an automated thing for the attackers. 
 
+**********
+
 ### Command and Control (C2)
 
-the next part of the project is the creation of the C2 server, just like i planned it on the [logical diagram](logicaldia)
+the next part of the project is the creation of the C2 server, just like i planned it on the logical diagram
 
 but what is it? 
 is a term used in infosec and cyberwarfare to describe the infraestructure and techniques used by attackers to communicate with and control compromised systems
 
 its composed by the command server (receives commands from the attcaker and sends instructions to compromised systems), botnet, communication channels (like http, https, DNS queries or specialized protocols) and obfuscation and evation techniques.
+
+
+#### Attack Diagram
+
+#### Mythic Installation
+
+#### Agent Installation
+
+#### Attack Simulation
+
+### Create alert and dashboard 
+
+*******
+
+### Ticketing System
+
