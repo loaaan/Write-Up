@@ -7,13 +7,15 @@ I will leave here all the write ups, blogs or anything related to projects as a 
 ## Write Ups
 
 ### CTF
+- HackTheBox
+  -[evilCUPS](CTF/HTB/evilCUPS/evilCUPS.html)
 ### Reverse Engineer
 - crackme
   - [SimpleS crackme](RI/SimpleS%20crackmesde/SimpleS.html)
 
 ### Sherlock
 - HTB
-  - [Campfire](Sherlock/Campfire/campfire.html)
+  - [Campfire](Sherlock/Campfire/campfire.html)  
 
 - Blue Team Labs Online
   - [Web Shell](Sherlock/WebShell/WebShell.html)

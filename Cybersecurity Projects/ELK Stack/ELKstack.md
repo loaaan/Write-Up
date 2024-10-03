@@ -339,3 +339,5 @@ its composed by the command server (receives commands from the attcaker and send
 
 ### Ticketing System
 
+
+#### osTicket + ELK integration
